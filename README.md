@@ -1,5 +1,7 @@
 # Once Upon A Book
 
+MidTermProject built with Jonathan Cheng and Fransiskus Aldo.
+
 Once Upon A Book is a bookstore where sellers can sell their used books, and buyers can contact buyers to make transactions. Think of it as a Kijiji or Facebook Marketplace for used books.
 
 ## Final Product
