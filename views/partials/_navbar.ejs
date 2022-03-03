@@ -1,0 +1,56 @@
+<!-- <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="./routes/navbar.js"></script> -->
+
+<nav class="navbar fixed-top navbar-light bg-light" id="sticky-nav">
+  <a class="brand-typo" href="/">Once upon a book</a>
+  <div class="nav-right">
+    <% if (username) { %>
+    <a class="nav-text"> Hi, <%=username%></a>
+    <% } %>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#collapsingNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse" id="collapsingNavbar">
+    <ul class="navbar-nav">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        id="navbarDropdown"
+        role="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        My account
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Settings</a>
+        <a class="dropdown-item" href="/listings/">My items</a>
+        <a class="dropdown-item" href="/listings/sold">My sold items</a>
+        <a class="dropdown-item" href="/conversations">My messages</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Log out</a>
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" href="../listings/new"
+          ><i class="fa-solid fa-book"></i> Sell a book</a
+        >
+        <a class="nav-link" href="/books/search"
+          ><i class="fa-solid fa-cart-arrow-down"></i> Buy a book</a
+        >
+        <a class="nav-link" href="/favorites"
+          ><i class="fa-solid fa-heart"></i> My favorites</a
+        >
+      </li>
+      <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Hi, @name</a>
+          </li> -->
+    </ul>
+  </div>
+</nav>

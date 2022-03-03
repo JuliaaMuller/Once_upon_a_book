@@ -1,0 +1,26 @@
+section {
+  border: 2px solid black;
+  margin: 6rem 2rem 2rem;
+  font-size: 15px;
+  display: flex;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 4px;
+
+  #inbox-item {
+    display: flex;
+    text-decoration: none;
+    padding-bottom: 10px;
+    .fa-envelope {
+      font-size: 4rem;
+      padding: 10px 20px 10px 5px;
+      margin: auto 0px;
+    }
+    p {
+      color: black;
+    }
+  }
+  .fa-book-arrow-right {
+    font-size: 20px;
+  }
+}

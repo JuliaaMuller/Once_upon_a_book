@@ -1,0 +1,32 @@
+.advanced-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 15px;
+  width: auto;
+  height: auto;
+  border: 4px solid;
+  border-color: black;
+  border-radius: 8px;
+
+}
+
+.advanced-search-form {
+  align-items: center;
+  padding: 5px 0
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advanced-search-button {
+  margin: 10px;
+}
+

@@ -1,0 +1,186 @@
+.header-container {
+  background: black;
+  overflow: hidden;
+  background: #C33764;
+  background: url("https://cdn.theatlantic.com/thumbor/ydPXKj5crBE1zEitukJNhgXix38=/0x0:2885x1623/1952x1098/media/img/mt/2019/10/Tang_Atlantic_BookTheFuture/original.jpg");
+  height: 60vh;
+  width: auto;
+  display: flex;
+  background-position: center;
+  background-size: 1000px;
+  opacity: 0.8;
+  z-index: 1;
+  color: black;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.header-container h1 {
+  margin-top: 20px;
+}
+
+
+.divider-container {
+  height: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  min-height: 900px;
+}
+
+.main-box {
+  width: auto;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  background-image: url("https://cdn.theatlantic.com/thumbor/ydPXKj5crBE1zEitukJNhgXix38=/0x0:2885x1623/1952x1098/media/img/mt/2019/10/Tang_Atlantic_BookTheFuture/original.jpg");
+  background-size: 1000px;
+  background-position: center;
+}
+
+.title {
+  color: black;
+  font-size: 25px;
+  margin-bottom: 180px;
+}
+
+// .carousel-inner {
+//   border-radius: 8px;
+//   margin-top: 20px;
+//   width: 250px;
+
+//   .row {
+//     margin: 10px auto;
+//   }
+//   .desc-area {
+//     margin: 20px 20px 40px;
+//     .seller {
+//       justify-content: center;
+//     }
+//     h2 {
+//       display: flex;
+//       justify-content: center;
+//     }
+//     .title-ref {
+//       text-decoration: none;
+//     }
+//     .book-title {
+//       margin: 0x auto;
+//       align-items: center;
+//     }
+//   }
+//   a.price-tag-box {
+//     display: flex;
+//     justify-content: flex-start;
+//     margin: 0px auto;
+//   }
+//   .img-area {
+//     justify-content: center;
+//   }
+//   img {
+//     display: block;
+//     width: 209px;
+//     height: 315px;
+//     margin: 0 auto;
+//   }
+//   h2 {
+//     font-size: 1.5em;
+//     list-style: none;
+//   }
+// }
+
+.central-box {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.buy-box {
+  width: 35%;
+  border: 4px solid;
+  border-color: black;
+  border-radius: 8px;
+  background-image: url("https://us.123rf.com/450wm/jennyonthemoon/jennyonthemoon2002/jennyonthemoon200200027/142990455-des-gens-mignons-qui-%C3%A9tudient-et-lisent-sur-des-livres-g%C3%A9ants-l-illustration-vectorielle-dans-un-sty.jpg?ver=6");
+  background-position: center;
+  cursor: pointer;
+  padding-left: 10px;
+  background-repeat: no-repeat;
+}
+
+.buy-box:hover {
+  box-shadow: 6px 8px gray;
+}
+
+.sell-box {
+  width: 35%;
+  border: 4px solid;
+  border-color: black;
+  border-radius: 8px;
+  background-image: url("https://media.istockphoto.com/vectors/faceless-man-and-a-woman-are-holding-stacks-of-books-education-and-vector-id1226038968?k=20&m=1226038968&s=170667a&w=0&h=MKhoeWG4q3yGgrpESO60gYCeo-cHcJkjnfsZIsOvRqU=");
+  background-position: center;
+  cursor: pointer;
+  padding-left: 10px;
+  background-repeat: no-repeat;
+}
+
+.sell-box:hover {
+  box-shadow: 6px 8px gray;
+}
+
+.carousel-inner img {
+  object-fit: cover;
+  height: 500px;
+}
+
+.drk:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.carousel-caption {
+  transform: translateY(-50%);
+  bottom: 0;
+  top: 50%;
+  z-index: 2;
+}
+
+.carousel-caption h3 {
+  padding-bottom: 50px;
+}
+
+.carousel-item .img-fluid {
+  width:100%;
+  height:100%;
+}
+
+@media only screen and (min-width: 769px) {
+  .price-tag-box {
+    display: flex;
+  }
+  .card-price {
+    position: absolute;
+  }
+}

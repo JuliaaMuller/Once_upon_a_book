@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Connecting css files  -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/body.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/thread.css" type="text/css" />
+
+    <!-- <link rel="stylesheet" href="/styles/item_preview.css" type="text/css" /> -->
+    <link rel="stylesheet" href="/styles/nav_bar.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/books.css" type="text/css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Connecting Javascript files  -->
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/index.js"></script>
+
+    <title>Your Messages - Once Upon A Book</title>
+  </head>
+  <body>
+    <nav><%- include("../partials/_navbar") %></nav>
+    <header>
+      <h2>
+        Chat between <%= messageThread[0].user1 %> and <%=
+        messageThread[0].user2 %>
+      </h2>
+      <div class="msg-img">
+        <img src="<%= messageThread[0].item_photo_url %>" alt="" />
+      </div>
+
+      <h4><%= messageThread[0].item_title %></h4>
+      <h4>Listed at $<%= messageThread[0].item_price %>.</h4>
+    </header>
+
+    <section id="thread-container">
+      <% for (const message of messageThread) { %>
+      <div class="profile">
+        <img
+          src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
+          alt=""
+        />
+        <h4 id="username"><%= message.sender %></h4>
+      </div>
+      <div id="msg-container">
+        <div class="message-body">
+          <p><%= message.message_body %></p>
+        </div>
+        <div class="message-footer">
+          <p>Sent <%= message.sent_at %></p>
+        </div>
+      </div>
+      <% } %>
+    </section>
+    <form
+      action="/conversations/<%= messageThread[0].conversation_id %>"
+      method="POST"
+      id="message-reply"
+    >
+      <div id="reply-container">
+        <input
+          type="hidden"
+          name="item_id"
+          value="<%= messageThread[0].item_id %>"
+        />
+        <input type="text" name="message" placeholder="Reply Message" />
+        <button type="submit">Send</button>
+      </div>
+    </form>
+    <a href="/conversations" class="to-inbox">Back to inbox</a>
+    <footer><%- include("../partials/_footer") %></footer>
+  </body>
+</html>

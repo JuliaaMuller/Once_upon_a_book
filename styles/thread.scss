@@ -1,0 +1,121 @@
+header {
+  margin: 5rem auto 0px;
+  flex-direction: row;
+
+  h2 {
+    font-size: 1.2em;
+    margin: 10px auto;
+    text-align: center;
+    border: 2px solid gray;
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .msg-img {
+    width: 30%;
+    margin: 0px auto;
+    img {
+      width: 80%;
+      margin: 20px;
+    }
+  }
+  h4 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+section {
+  margin: 1rem 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 2px 4px gray;
+
+  .profile {
+    display: flex;
+    #username {
+      padding: 0px 10px;
+      font-size: 1.4em;
+    }
+  }
+  img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+
+  #msg-container {
+    border: 2px solid black;
+    background-color: aliceblue;
+    border-radius: 4px;
+    margin: 10px 0px;
+    box-shadow: 2px 4px gray;
+    display: flex;
+    flex-direction: column;
+    .message-body {
+      padding: 10px;
+    }
+    .message-footer {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+  }
+}
+#reply-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+
+  input {
+    height: 80px;
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
+  button {
+    width: 40%;
+    margin: 0px auto;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: aliceblue;
+    box-shadow: 2px 4px gray;
+  }
+}
+.to-inbox {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.to-inbox:hover {
+  text-decoration: none;
+  background-color: aliceblue;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    margin: 10rem auto 0px;
+  }
+}

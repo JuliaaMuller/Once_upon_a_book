@@ -1,0 +1,30 @@
+nav {
+  position:relative;
+}
+
+.brand-typo {
+  color: black;
+  font-size: 35px;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-text {
+  display:none;
+}
+
+#sticky-nav {
+  position: sticky;
+}
+
+
+@media only screen and (min-width: 650px) {
+  .nav-text {
+    display:inline;
+    margin-right: 30px;
+  }
+}

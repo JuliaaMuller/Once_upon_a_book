@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <form action="/auth" method="POST" id="login-form">
+      <select name="user_id"">
+
+        <% for (const user of users) { %>
+          <option value="<%= user.id %>"><%= user.name %></option>
+        <% } %>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <form action="/auth/logout" METHOD="POST" id="logout-form">
+      <button type="submit">Log out and clear cookies</button>
+    </form>
+  </body>
+</html>
